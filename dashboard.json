@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "totalProblems": 5,
-    "lastUpdated": "2025-10-07T18:09:52.012Z",
+    "totalProblems": 6,
+    "lastUpdated": "2025-10-07T20:43:36.434Z",
     "breakdown": {
       "Codechef": {
-        "total": 0,
-        "Easy": 0,
+        "total": 1,
+        "Easy": 1,
         "Medium": 0,
         "Hard": 0
       },
@@ -30,6 +30,22 @@
     }
   },
   "problems": [
+    {
+      "id": "codechef-easy-search-an-element-in-an-array",
+      "platform": "Codechef",
+      "difficulty": "Easy",
+      "problemName": "Search an element in an array",
+      "language": "java",
+      "files": {
+        "code": "import java.util.*;\nimport java.lang.*;\nimport java.io.*;\n\nclass Codechef\n{\n\tpublic static void main (String[] args) throws java.lang.Exception\n\t{\n\t\t// your code goes here\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        int x = sc.nextInt();\n        \n        boolean isfound = false;\n        \n        for (int i = 0;i < n ;i++ ){\n            int ce = sc.nextInt();\n            if(ce == x){\n                isfound = true;\n            }\n        }\n        \n        if (isfound){\n            System.out.println(\"YES\");\n        }\n        else{\n            System.out.println(\"NO\");\n        }\n        \n        sc.close();\n\t}\n}",
+        "readme": "arrays\n\nSearch an element in an array\n\nYou are given an array \n𝐴\nA of size \n𝑁\nN and an element \n𝑋\nX. Your task is to find whether the array \n𝐴\nA contains the element \n𝑋\nX or not.\n\nInput Format\nThe first line contains two space-separated integers \n𝑁\nN and \n𝑋\nX — the size of array and the element to be searched.\nThe second line contains all the elements of array \n𝐴\nA\nOutput Format\n\nOutput \"YES\" if the element \n𝑋\nX is present in \n𝐴\nA, otherwise output \"NO\".\n\nConstraints\n1\n≤\n𝑁\n,\n𝑋\n≤\n10\n5\n1≤N,X≤10\n5\n1\n≤\n𝐴\n𝑖\n≤\n10\n5\n1≤A\ni\n\t​\n\n≤10\n5\nSample 1:\nInput\nOutput\n5 3\n7 3 5 2 1\nYES\nSample 2:\nInput\nOutput\n5 10\n7 3 5 2 1\nNO",
+        "notes": ""
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": false,
+      "lastUpdated": "2025-10-07T20:43:25.000Z"
+    },
     {
       "id": "gfg-easy-missing-in-array",
       "platform": "Gfg",
