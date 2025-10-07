@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 4,
-    "lastUpdated": "2025-10-07T18:03:53.887Z",
+    "totalProblems": 5,
+    "lastUpdated": "2025-10-07T18:05:33.978Z",
     "breakdown": {
       "Codechef": {
         "total": 0,
@@ -16,8 +16,8 @@
         "Hard": 0
       },
       "Leetcode": {
-        "total": 3,
-        "Easy": 2,
+        "total": 4,
+        "Easy": 3,
         "Medium": 0,
         "Hard": 1
       },
@@ -77,6 +77,22 @@
       "hasReadme": true,
       "hasNotes": false,
       "lastUpdated": "2025-10-07T17:51:43.000Z"
+    },
+    {
+      "id": "leetcode-easy-valid-parentheses",
+      "platform": "Leetcode",
+      "difficulty": "Easy",
+      "problemName": "Valid Parentheses",
+      "language": "cpp",
+      "files": {
+        "code": "#include <stack>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValid(string s) {\n        stack<char> stk;\n        unordered_map<char, char> pairs = {\n            {')', '('},\n            {'}', '{'},\n            {']', '['}\n        };\n\n        for (char c : s) {\n            // If c is a closing bracket\n            if (pairs.count(c)) {\n                // Pop top element from stack or use dummy if empty\n                char top = stk.empty() ? '#' : stk.top();\n                stk.pop();\n\n                // If top doesn't match corresponding opening bracket, invalid\n                if (top != pairs[c]) {\n                    return false;\n                }\n            } else {\n                // Push opening brackets\n                stk.push(c);\n            }\n        }\n\n        // If stack empty, all brackets matched correctly\n        return stk.empty();\n    }\n};",
+        "readme": "StringStack\n\nGiven a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n\n\n\tOpen brackets must be closed by the same type of brackets.\n\tOpen brackets must be closed in the correct order.\n\tEvery close bracket has a corresponding open bracket of the same type.\n\n\n \nExample 1:\n\n\nInput: s = \"()\"\n\nOutput: true\n\n\nExample 2:\n\n\nInput: s = \"()[]{}\"\n\nOutput: true\n\n\nExample 3:\n\n\nInput: s = \"(]\"\n\nOutput: false\n\n\nExample 4:\n\n\nInput: s = \"([])\"\n\nOutput: true\n\n\nExample 5:\n\n\nInput: s = \"([)]\"\n\nOutput: false\n\n\n \nConstraints:\n\n\n\t1 <= s.length <= 104\n\ts consists of parentheses only '()[]{}'.",
+        "notes": ""
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": false,
+      "lastUpdated": "2025-10-07T18:05:20.000Z"
     },
     {
       "id": "leetcode-hard-median-of-two-sorted-arrays",
